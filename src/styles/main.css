@@ -77,7 +77,7 @@ botão, como abaixo: */
     border-radius: 5px;
     align-tracks: center;
     align-content: center;
-    border-style: solid;
+/*     border-style: solid; */
 }
 
 /* Agora criamos para os itens que ainda nem existem. Mas o estilo
