@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px 20PX; /*gap entre itens. Aqui já dá pra ver a mudança no
+    gap: 5px 5PX; /*gap entre itens. Aqui já dá pra ver a mudança no
     layout da página. Dá pra entender o tamanho do container e o
     espaçamento até o botão. E para finalizar o layout do
     container, uso a propriedade abaixo. Pra gerar bons gradientes
@@ -27,27 +27,27 @@ body {
         #7303c0 30%,
         #ec38bc,
         #fdeff9 100%
-        
+    
     );
 
     /* E tudo até aqui tá muito grudado. Então eu uso...*/
-    padding: 40px 60px;
+    padding: 10px 10px;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    /* letter-spacing: 0.1em; */
 }
 
 .reset {
-    padding: 15px 20px;  /* pra engordar o botão */
+    padding: 8px 10px;  /* pra engordar o botão */
     width: 100%;  /* pra ele alragar o máximo que puder */
     color: #000;
     background-color: #fff;
     border: none;  /* tirando a borda do button */
-    font-size: 2.5em;
+    font-size: 1.8em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     cursor: pointer; /* Aqui vira a mãozinha quando der hover no button */
@@ -67,7 +67,7 @@ botão, como abaixo: */
 .game {
     /* border: 1px solid red; esta borda é que estava estragando o
     visual, e não ajustava as figuras dentro */
-    width: 420px;
+    width: 385px;
     height: 420px; /* Aqui vai abrir o espaço da página para o container*/
     display: flex;
     flex-wrap: wrap; /* só funciona com o display em flex */
@@ -75,13 +75,16 @@ botão, como abaixo: */
     transform-style: preserve-3d;
     perspective: 500px; /* efeito de perspectiva no movimento da imagem */
     border-radius: 5px;
+    align-tracks: center;
+    align-content: center;
+    border-style: solid;
 }
 
 /* Agora criamos para os itens que ainda nem existem. Mas o estilo
 já fica definido */
 .item {
     position: relative;
-    width: 100px;
+    width: 90px;
     height: 100px;
     display: flex;
     align-items: center;
