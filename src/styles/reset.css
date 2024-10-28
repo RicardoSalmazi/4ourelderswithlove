@@ -1,0 +1,13 @@
+/* Todo reset .css existe pra unificar o visual
+em qualquer navegador. E estes são os atributos iniciais
+mais usados, exceto o font-family (por conta do game). Só
+isto neste arquivo. Agora outros detalhes do <body> serão
+escritos no arquivo mais.css*/
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: monospace;
+}

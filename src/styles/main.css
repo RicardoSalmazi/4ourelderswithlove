@@ -1,0 +1,122 @@
+/* Aqui virão outros estilos para a tela do game ou página html*/
+body {
+    display: flex; /* Para responsividade em qualquer tela */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fcab1e;
+    user-select: none;
+}
+
+/* Também aqui vamos estilizar o container criado */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 20PX; /*gap entre itens. Aqui já dá pra ver a mudança no
+    layout da página. Dá pra entender o tamanho do container e o
+    espaçamento até o botão. E para finalizar o layout do
+    container, uso a propriedade abaixo. Pra gerar bons gradientes
+    tem uma página que simula, que é a "css gradiente generator".
+    O site é o "cssgradiente.io"*/
+    background: linear-gradient(
+        325deg,
+        #03001e 0%,
+        #7303c0 30%,
+        #ec38bc,
+        #fdeff9 100%
+        
+    );
+
+    /* E tudo até aqui tá muito grudado. Então eu uso...*/
+    padding: 40px 60px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset {
+    padding: 15px 20px;  /* pra engordar o botão */
+    width: 100%;  /* pra ele alragar o máximo que puder */
+    color: #000;
+    background-color: #fff;
+    border: none;  /* tirando a borda do button */
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer; /* Aqui vira a mãozinha quando der hover no button */
+    font-weight: 600; /* Só pra dar efeito de opacidade */
+    border-radius: 5px;
+}
+
+/* E para dar o efeito de foco, usamos outra propriedade fora do
+botão, como abaixo: */
+
+.reset:focus {
+    color:#ec38bc;
+    background-color: #262809;
+}
+
+/* Agora vou criar o estilo para a div "game" lá do arquivo index. */
+.game {
+    /* border: 1px solid red; esta borda é que estava estragando o
+    visual, e não ajustava as figuras dentro */
+    width: 420px;
+    height: 420px; /* Aqui vai abrir o espaço da página para o container*/
+    display: flex;
+    flex-wrap: wrap; /* só funciona com o display em flex */
+    gap: 5px; /* espaçamento dos itens lá dentro do container */
+    transform-style: preserve-3d;
+    perspective: 500px; /* efeito de perspectiva no movimento da imagem */
+    border-radius: 5px;
+}
+
+/* Agora criamos para os itens que ainda nem existem. Mas o estilo
+já fica definido */
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /*font-size: 3em;  /* Fiz isso depois de constatar que as imagens ficaram pequenas */
+    transform: rotateY(180deg);
+    transition: 0.5s; /*Não ficou claro quando isso acontesse.
+                      Por enquanto só quando salva.*/
+    cursor: pointer;
+}
+
+.imageHidden {
+    display: none;
+}
+/* Agora preciso que os itens fiquem ocultos */
+.item img {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #404040; /* Pra ficar opaco */
+    opacity: 0.85; /*Isto deve ficar só comentado. Só pra ver o card, não usar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*border-radius: 5px;*/
+    transition: 0.5s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden; /* Pra imagem do card ficar invisível */
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxMatch img {
+    display: block;
+}
