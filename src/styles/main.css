@@ -52,7 +52,7 @@ h2 {
     text-transform: uppercase;
     cursor: pointer; /* Aqui vira a mãozinha quando der hover no button */
     font-weight: 600; /* Só pra dar efeito de opacidade */
-    border-radius: 5px;
+/*     border-radius: 5px; */
 }
 
 /* E para dar o efeito de foco, usamos outra propriedade fora do
